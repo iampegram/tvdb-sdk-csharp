@@ -9090,7 +9090,7 @@ namespace Tvdb.Sdk
                                 throw new SeriesException("Response was null which was not expected.", status_, objectResponse_.Text, headers_, null);
                             }
                             // workaround for inoperative season types
-                            if(objectResponse_.Object.Data.Episodes.Count = 0)
+                            if(objectResponse_.Object.Data.Episodes.Count == 0)
                             {
                                 // Get all season records for the series
                                 var seriesExt = await GetSeriesExtendedAsync(id, null, true, cancellationToken);
